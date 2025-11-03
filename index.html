@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+  
+    <nav class="desktop-nav">
+        <div class="nav-title">
+            Nostra
+        </div>
+        <div class="nav-list">
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Reservation.html">Reservation</a></li>
+                <li><a href="Contact.html#Join-Us">Join our Mailist</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links" id="menuLinks">
+                <ul>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="Home.html#Gallery" onclick="toggleMenu()">Gallery</a></li>
+                    <li><a href="About.html" onclick="toggleMenu()">About</a></li>
+                    <li><a href="Menu.html" onclick="toggleMenu()">Menu</a></li>    
+                    <li><a href="Contact.html#Join-Us" onclick="toggleMenu()">Join our Mailist</a></li>    
+                    <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>    
+                </ul>
+            </div>
+        </div> 
+    </nav>
+
+<section id="Home">
+        <div class="home-content">
+            <div class="nostra-logo">
+                <img src="./Assets/nostra-logo.png" alt="Home Logo" class="home-logo">
+            </div>
+            <div class="home-about">
+                <p class="=home-title">A New Experience</p>
+                <p class="home-paragraph">Where every dish tells a story, and every meal becomes a memory.</p>
+            </div>
+        </div>
+</section>
+
+
+<section id="Gallery">
+    <h1 class="title">View our gallery</h1>
+    <div class="gallery-details-container">
+        <div class="gallery-color-container">
+            <div class="gallery-item">
+                <img src="./Assets/res1.jpg" alt="Gallery 1" class="gallery-img"/>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./Assets/res2.jpg" alt="Gallery 2" class="gallery-img"/>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./Assets/res3.jpg" alt="Gallery 3" class="gallery-img"/>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./Assets/res4.jpg" alt="Gallery 4" class="gallery-img" />
+            </div>
+
+            <div class="gallery-item">
+                <img src="./Assets/res5.jpg" alt="Gallery 5" class="gallery-img"  />
+            </div>
+
+            <div class="gallery-item">
+                <img src="./Assets/res6.jpg" alt="Gallery 6" class="gallery-img"  />
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+
+    <div class="footer-title">
+        <h1>Nostra</h1>
+    </div>
+
+    <div id="socials-container">
+        
+        <img  src="./Assets/Instagram.png" alt="Instagram Profile"
+        class="icon"
+        onclick="location.href='https://Instagram.com/'"
+        />
+        <img src="./Assets/X.jpg" alt="Twitter Profile"
+        class="icon"
+        onclick="location.href='https://twitter.com/'"
+        />
+        <img  src="./Assets/Pinterest.png" alt="Pinterest Profile"
+        class="icon"
+        onclick="location.href='https://Pinterest.com/'"
+        />
+        </div>
+
+    <div id="Footer-disclaimer">
+        <p> &#169; Copyright 2025 | NOSTRA (Pty) Ltd | All Rights Reserved | Terms and conditions of use | Privacy and Data Policy | Website developed by Viossixth</p>
+    </div>
+</footer>
+</body>
+</html>

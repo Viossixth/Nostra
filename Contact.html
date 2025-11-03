@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="desktop-nav">
+        <div class="logo">
+            Nostra
+        </div>
+        <div>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Home.html#Gallery">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Reservation.html">Reservation</a></li>
+                <li><a href="Contact.html#Join-Us">Join our Mailist</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links" id="menuLinks">
+                <ul>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="Home.html#Gallery" onclick="toggleMenu()">Gallery</a></li>
+                    <li><a href="About.html" onclick="toggleMenu()">About</a></li>
+                    <li><a href="Menu.html" onclick="toggleMenu()">Menu</a></li>    
+                    <li><a href="Contact.html#Join-Us" onclick="toggleMenu()">Join our Mailist</a></li>    
+                    <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>    
+                </ul>
+            </div>
+        </div> 
+</nav>
+
+<section id="Contact-header">
+    <div>
+        <div class="Header-info">
+            <img src="Assets/wallpaper-Nostra.png" alt="Contact us Info Image">
+        </div>
+    </div>
+</section>
+
+<section id="About">
+    <div class="about-container">
+
+        <div class=" about-location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3562043264446!2d28.01615287472183!3d-26.185088563194547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c0a6ffc9379%3A0x3d365796c1f181b!2s44%20STANLEY!5e0!3m2!1sen!2sza!4v1746638307148!5m2!1sen!2sza" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class=" about-text">
+
+            <div class="nav-links-container">
+                <h1>Nostra</h1>
+                    <div class=" contact-info"></div>
+                <div id="footer-telephone">
+                    <p><img src="./Assets/telephone.png" alt="Contact Details"> +27 11 595 3628 </p>
+                </div>
+                <div id="footer-location">
+                    <p><img src="./Assets/location.png" alt="Physical Address"> 44 Stanley Street, Braamfontein Warf,Johannesburg 0002</p>
+                </div> 
+                <div id="footer-mail">
+                    <p><img src="./Assets/mail.png" alt="Email Address"> Enquiries@Nostra.com</p>
+                </div>
+            </div>
+
+            <div class="Message-container">
+                <h1 class="Message-title">General Inquiries</h1>
+                <form action="POST">
+
+                </form>
+                <label for="name"></label>
+                <input type="text" id="Message-name" name="name" placeholder="Name" size="50" required>
+
+                <label for="Surnname"></label>
+                <input type="text" id="Message-Surname" name="Surname" placeholder="Surname" size="50" required>
+                <br>
+                <label for="email"></label>
+                <input type="email" id="Message-email" name="email" placeholder="Email" size="50" required>
+                
+                <label for="telephone"></label>
+                <input type="tel" id="Message-tel" name="telephone" placeholder="Contact Number" size="50" required>
+                <br>
+                <label for="Selector"></label>
+                <select name="message" id="Selector" >
+                    <option value="">---Select---</option>
+                    <option value="Complaint">Complaint</option>
+                    <option value="Compliment">Compliment</option>
+                    <option value="Suggestion">Suggestion</option>
+                </select>
+                <br>
+                
+                <label for="Message"></label>
+                <textarea name="Message" id="Message" placeholder="Message..." ></textarea>
+               <br>
+                
+                <button type="submit" class="message-btn"   onkeypress="myFunction()">Send</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Join-Us">
+    <div class="joinus-container">
+
+            <img src="Assets/Company.jpg" alt="Join our membership">
+
+        <div class="Join-form">
+
+            <h1 class="join-us-text">Join Our Mailist</h1>
+            <form class="membership-form"  action="https://formspree.io/f/xjvjlqzq" method="post">
+                
+            <label for="email"></label>
+            <input type="text" id="join-email" name="email" placeholder="Email" required>
+
+            <button type="submit" onkeypress="myFunction()">Join Us !</button>
+
+         
+            </form>
+        </div>
+    </div>
+
+    
+</section>
+
+<footer>
+    <div class="footer-title">
+        <h1>Nostra</h1>
+    </div>
+    <div id="socials-container">
+        <img  src="./Assets/Instagram.png" alt="Instagrm Profile"
+        class="icon"
+        onclick="location.href='https://Instagram.com/'"
+        />
+        <img src="./Assets/X.jpg" alt="Twitter Profile"
+        class="icon"
+        onclick="location.href='https://twitter.com/'"
+        />
+        <img  src="./Assets/Pinterest.png" alt="Pinterest Profile"
+        class="icon"
+        onclick="location.href='https://Pinterest.com/'"
+        />
+        </div>
+    <div id="Footer-disclaimer">
+        <p> &#169; Copyright 2025 | NOSTRA (Pty) Ltd | All Rights Reserved | Terms and conditions of use | Privacy and Data Policy | Website developed by Viossixth</p>
+    </div>
+</footer>
+</body>
+</html>

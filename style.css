@@ -1,0 +1,644 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+/*Nav section*/
+
+.nav-links{
+display:flex;
+}
+/*FIX*/
+
+/* Default styles */
+.desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: white;
+    align-items: center;
+  }
+  
+  #hamburger-nav {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem 2rem;
+  }
+  
+  .hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+    background-color: black;
+  }
+  
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem 2rem;
+  }
+  
+  .menu-links.open {
+    display: flex;
+  }
+  
+ 
+.nav-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: antiquewhite;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181,181);
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/*Hamnburger Menu*/
+
+#hamburger-nav{
+    display: none;
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.menu-links {
+    position: absolute;
+    top: 60px; /* adjust based on your nav height */
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    display: none; /* toggled with JavaScript */
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li{
+    list-style: none;
+}
+
+.menu-links-open{
+    max-height: 300px;
+}
+
+.hamburger-icon-open span:first-child{
+    transform:rotate(45deg) translate(10px,5px);
+}
+
+.hamburger-icon-open span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger-icon-open span:last-child{
+    transform:rotate(-45deg) translate(10px, -5px) ;
+}
+
+.hamburger-icon span:first-child{
+    transform:rotate(none);
+}
+
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child{
+    transform:rotate(none);
+}
+/**/
+/* Hide desktop nav on mobile */
+@media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+  
+    #hamburger-nav {
+      display: block;
+    }
+  
+    .hamburger-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+  
+    .hamburger-icon span {
+      height: 3px;
+      width: 100%;
+      background-color: black;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .menu-links {
+      display: none;
+      flex-direction: column;
+      background-color: white;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  
+    .menu-links.active {
+      display: flex;
+    }
+  }
+  
+/**/
+
+/*Home section*/
+#Home{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.home-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.home-pic{
+    width: 45%;
+}
+
+.home-pic img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.home-text{
+    text-align: left;
+    font-size: 2.5rem;
+    width: 50%;
+    padding-left: 20px;
+}
+
+.home-title{
+    font-size: 3rem;
+    text-align: center;
+    text-align: left;
+}
+
+.home-textp1{
+    text-align: right;
+}
+
+.html {
+    scroll-behavior: smooth;
+  }
+
+
+
+
+/*Gallery section*/
+#Gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(252, 225, 225);
+}
+
+
+.gallery-color-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 300px; /* or whatever max size you want */
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* optional: nice rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* optional: slight shadow */
+    transition: transform 0.3s ease; /* smooth hover animation */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/*Menu*/
+#For-you{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Menu-graphics{
+    height: auto;
+    max-width: 100%;
+}
+
+.Menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+
+
+/*Reservation*/
+#Reservation{
+    padding: 20px;
+}
+
+.reservation-title{
+    font-size: large;
+    text-align: center;
+}
+
+.reservation-text{
+    text-align: center;
+}
+
+.reservation-form{
+    text-align: center;
+}
+
+.reservation-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .reservation-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .reservation-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+/*Join Us*/
+
+#Join-Us{
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.join-us-text{
+    text-align: center;
+}
+
+.membership-form{
+    text-align: center;
+}
+
+#length{
+    text-align: center;
+}
+
+.invalid{
+    text-align: center;
+}
+
+.Join-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(255, 255, 255);
+}
+/*Reserve button animations*/
+.reserve-btn:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+
+
+/* Contact Header*/
+#Contact-header{
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+/*Contact-Us Page*/
+
+#Contact-header{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.Message-container{
+    position: relative;
+    border-radius: 5px;
+    background-color: #ffbfbf;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    gap: 5px;
+    justify-items: center;
+}
+
+
+.message-btn:hover{
+    background-color:thistle;
+}
+/**/
+
+
+*ABOUT*/
+/*BIOGRAPHY SECTION*/
+#About{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#Message{
+    border: none;
+    margin: 4px;
+    height: 80px;
+    width: 735px;
+}
+
+#Message-name{
+    text-align: center;
+    border: none;
+    margin-bottom: 4px;
+}
+
+#Message-Surname{
+    text-align: center;
+    border:none;
+    margin-bottom: 4px;
+}
+
+#Message-email{
+    text-align: center;
+    border: transparent;
+    margin-bottom: 4px;
+}
+
+#Message-tel{
+    text-align: center;
+    border:none;
+    margin-bottom: 4px;
+}
+
+#Selector{
+    border: none;
+    text-align: center;
+    margin: 4px;
+    height: 25px;
+    width: 743px;
+}
+
+
+.about-location{
+    width: 45%;
+}
+
+.about-text{
+    position: absolute;
+    top: 50%;
+    left: 73%;
+    transform: translate(-50%,-50%);
+    color: rgb(252, 252, 252);
+    font-family: cursive;
+}
+
+.Skills-title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+#footer-telephone img{
+    vertical-align: middle;
+    height: 2rem;
+}
+
+#footer-location img{
+    vertical-align: middle;
+    height: 2rem;
+}
+
+#footer-mail img{
+    vertical-align: middle;
+    height: 2rem;
+}
+   /* Some changes*/
+   .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .about-pic,
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .about-text-p1 {
+    font-size: 0.5rem;
+    text-decoration-color: #555;
+    line-height: 1.6;
+  }
+  
+   /* Some changes*/
+   
+/*Footer Section*/
+
+.footer-title{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer{
+    height: 25vh;
+    margin: 0 1rem;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around; /* or center if preferred */
+    align-items: center;
+    height: 17vh;
+    padding: 20px 40px;
+  }
+  
+
+  .nav-links-container h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin: 0 1 rem;
+  }
+  
+  
+  .contact-info {
+    display: flex;
+    gap: 30px; /* Space between contact items */
+    text-align: center;
+  }
+  
+  .contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-info img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .contact-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+  }
+
+#footer-telephone:hover {
+    transform: scale(1.05);
+}
+
+#footer-mail:hover {
+    transform: scale(1.05);
+}
+
+#footer-location:hover {
+    transform: scale(1.05);
+}
+
+#socials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+#Instagram-logo,
+#X-logo,
+#Pinterest-logo :hover{
+    transform: scale(1.05);
+}
+
+#X-logo,
+#Pinterest-logo,
+#Instagram-logo {
+    height: 7.5vh;
+}
+
+
+.icon{
+    cursor: pointer;
+    height: 3rem;
+}

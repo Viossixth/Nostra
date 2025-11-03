@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="desktop-nav">
+        <div class="logo">
+            Nostra
+        </div>
+        <div>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Home.html#Gallery">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Reservation.html">Reservation</a></li>
+                <li><a href="Contact.html#Join-Us">Join our Mailist</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links" id="menuLinks">
+                <ul>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="Home.html#Gallery" onclick="toggleMenu()">Gallery</a></li>
+                    <li><a href="About.html" onclick="toggleMenu()">About</a></li>
+                    <li><a href="Menu.html" onclick="toggleMenu()">Menu</a></li>    
+                    <li><a href="Contact.html#Join-Us" onclick="toggleMenu()">Join our Mailist</a></li>    
+                    <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>    
+                </ul>
+            </div>
+        </div> 
+</nav>
+
+    <section id="Reservation">  
+
+        <div class="reservation-container">
+
+            <div class="reservation-img">
+                <img src="Assets/Miss.jpg" alt="">
+            </div>
+
+            <div class="reservation-gallery">
+                <img src="./Assets/1.png" alt="Image 1">
+                <img src="./Assets/2.png" alt="Image 2">
+                <img src="./Assets/3.png" alt="Image 3">
+                <img src="./Assets/4.png" alt="Image 4">
+                <img src="./Assets/5.png" alt="Image 5">
+                <img src="./Assets/6.png" alt="Image 6">
+              </div>
+
+            <div class="reservation-details">
+                <h1 class="reservation-title">Make a reservation</h1>
+                <p class="reservation-text">Book your table now and experience the magic of Nostra.</p>
+                <form class="reservation-form" action="https://formspree.io/f/xjvjlqzq" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                    
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" required>
+                    
+                    <button type="submit" class="reserve-btn"   onkeypress="myFunction()">Reserve Now</button>
+                </form>
+            </div>
+        </div>   
+    </section>
+
+    <footer>
+
+        <div class="footer-title">
+            <h1>Nostra</h1>
+        </div>
+    
+        <div id="socials-container">
+            
+            <img  src="./Assets/Instagram.png" alt="Instagrm Profile"
+            class="icon"
+            onclick="location.href='https://Instagram.com/'"
+            />
+            <img src="./Assets/X.jpg" alt="Twitter Profile"
+            class="icon"
+            onclick="location.href='https://twitter.com/'"
+            />
+            <img  src="./Assets/Pinterest.png" alt="Pinterest Profile"
+            class="icon"
+            onclick="location.href='https://Pinterest.com/'"
+            />
+            </div>
+    
+        <div id="Footer-disclaimer">
+            <p> &#169; Copyright 2025 | NOSTRA (Pty) Ltd | All Rights Reserved | Terms and conditions of use | Privacy and Data Policy | Website developed by Viossixth</p>
+        </div>
+    
+    </footer>
+</body>
+</html>
